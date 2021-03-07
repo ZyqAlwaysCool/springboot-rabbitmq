@@ -1,0 +1,12 @@
+server:
+  port: 18888
+
+spring:
+  rabbitmq:
+    host: 172.20.46.192
+    port: 5672
+    username: guest # 默认为guest
+    password: guest # 默认为guest
+    #=====消息确认配置项(生产者推送消息成功、消费者接收消息成功)=====
+    publisher-confirm-type: correlated #确认消息发送至交换机(exchange)
+    publisher-returns: true # 确认消息发送至队列(queue)
